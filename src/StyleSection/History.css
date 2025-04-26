@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    background: linear-gradient(135deg, #08FDC7, #07DFF7);
+    min-height: 60vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .component-box {
+    background-color: #79a3e3;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    transition: transform 0.2s ease;
+    background: linear-gradient(135deg, #74ebd5, #cbbdab);
+  }
+  
+  .component-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  
+  
