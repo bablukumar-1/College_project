@@ -19,8 +19,8 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Dashboard" element={<Dashboard/>} />
           <Route path="/AutofaceAuthentygation" element={<AutofaceAuthentygation />} />
-          <Route path="sigin" element={<Sigin/>}/>
-          <Route path="signup" element={<Signup/>}/>
+          <Route path="/sigin" element={<Sigin/>}/>
+          <Route path="/signup" element={<Signup/>}/>
         </Routes>
         <Footer/>
       </Router>
