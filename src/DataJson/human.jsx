@@ -33,6 +33,7 @@ const ObjectHuman = [
   },
   
   {
+    
     name: "Amarjeet Kumar",
     role: "Student",
     imagePath: "/images/amarjeet.jpg",
