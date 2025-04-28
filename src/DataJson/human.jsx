@@ -11,26 +11,6 @@ const ObjectHuman = [
     batch: "2022-2026",
   },
   {
-    name: "Amarjeet Kumar",
-    role: "Student",
-    imagePath: "/images/amarjeet.jpg",
-    department: "IT",
-    college: "SITE",
-    enrollment_No: "2201000000743",
-    projectRole: "Idea & Design Developer",
-    batch: "2022-2026",
-  },
-  {
-    name: "Gyanendra",
-    role: "Student",
-    imagePath: "/images/gyanendra.jpg",
-    department: "CSE",
-    college: "SITE",
-    enrollment_No: "2201000000744",
-    projectRole: "Team Supporter",
-    batch: "2022-2026",
-  },
-  {
     name: "Chandra Bhushan Kumar",
     role: "Student",
     imagePath: "/images/bhushan.jpg",
@@ -40,6 +20,30 @@ const ObjectHuman = [
     projectRole: "UI Developer",
     batch: "2022-2026",
   },
+
+  {
+    name: "Gyanendra",
+    role: "Student",
+    imagePath: "/images/gyanendra.jpg",
+    department: "CSE",
+    college: "SITE",
+    enrollment_No: "2201000000744",
+    projectRole: "Idea & Design Developer",
+    batch: "2022-2026",
+  },
+  
+  {
+    name: "Amarjeet Kumar",
+    role: "Student",
+    imagePath: "/images/amarjeet.jpg",
+    department: "IT",
+    college: "SITE",
+    enrollment_No: "2201000000743",
+    projectRole: "Team Supporter ",
+    batch: "2022-2026",
+  },
+  
+  
   {
     name: "Dr. Ashima",
     role: "Faculty",
