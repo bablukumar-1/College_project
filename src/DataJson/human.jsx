@@ -127,5 +127,25 @@ const ObjectHuman = [
     projectRole: "no",
     batch: "2022-2026",
   },
+  {
+    name: "Sumit Kumar",
+    role: "Student",
+    imagePath: "/images/Sumit.jpg",
+    department: "CSE",
+    college: "SITE",
+    enrollment_No: "2201000000258",
+    projectRole: "no",
+    batch: "2022-2026",
+  },
+  {
+    name: "Sumit Kumar",
+    role: "Student",
+    imagePath: "/images/Sumit.jpg",
+    department: "CSE",
+    college: "SITE",
+    enrollment_No: "2201000000258",
+    projectRole: "no",
+    batch: "2022-2026",
+  },
 ];
 export default ObjectHuman;
