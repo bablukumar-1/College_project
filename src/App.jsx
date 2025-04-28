@@ -7,7 +7,7 @@ import About from "./page/About";
 import Footer from "./components/Footer";
 import Dashboard from "./page/Dashboard";
 import Sigin from "./components/Sigin";
-import Signup from "./components/Signup";
+import Signup from "./components/Signup"
 
 function App() {
   return (
