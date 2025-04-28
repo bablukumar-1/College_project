@@ -176,16 +176,20 @@ const FaceRecognition = () => {
 
   return (
     <>
-    <div className="bg-gradient-to-bl from-[#08FDC7] to-[#07DFF7]">
+   <div
+     style={{
+       background: 'linear-gradient(90deg, rgba(161, 163, 240, 1) 29%, rgba(29, 227, 253, 1) 56%, rgba(156, 92, 196, 1) 100%)'
+     }}
+   >
       <div className="p-2 sm:p-4 flex flex-col items-center justify-center">
         <div className="relative w-full"> {/* full screen width */}
           <video
             ref={videoRef}
             autoPlay
             muted
-            className="border border-white w-full h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-md shadow-2xl object-cover" 
+            className="  w-full h-[180px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-md shadow-2xl object-cover p-5" 
           />
-          <div className="absolute top-0 left-0 w-full p-3 bg-[#F70761] bg-opacity-70 text-white text-center text-lg sm:text-xl rounded-t-md">
+          <div className="absolute top-0 left-0 w-full p-3 bg-[#11ED40] bg-opacity-70 text-white text-center text-lg sm:text-xl rounded-t-md">
             {currentMatches.length > 0 ? (
               currentMatches.map((match, index) => (
                 <div key={index}>
@@ -195,7 +199,7 @@ const FaceRecognition = () => {
                 </div>
               ))
             ) : (
-              <div>No one detected</div>
+              <div className="text-red-500 text-[22px]">No one detected</div>
             )}
           </div>
           <img

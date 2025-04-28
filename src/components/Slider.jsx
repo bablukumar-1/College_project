@@ -16,7 +16,11 @@ const ImageSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-bl from-[#08FDC7] to-[#07DFF7] p-6">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center  p-6"
+    style={{
+        background: 'linear-gradient(90deg, rgba(161, 163, 240, 1) 29%, rgba(29, 227, 253, 1) 56%, rgba(156, 92, 196, 1) 100%)'
+      }}
+    >
       {/* Main Image Slider */}
       <Swiper
         loop={true}
@@ -35,7 +39,7 @@ const ImageSlider = () => {
             <img
               src={img.imagePath}
               alt={`Slide ${idx}`}
-              className="w-full h-full object-cover"
+              className="w-[100%] h-[100%] object-cover"
             />
           </SwiperSlide>
         ))}
@@ -69,3 +73,4 @@ const ImageSlider = () => {
 
 
 export default ImageSlider
+
