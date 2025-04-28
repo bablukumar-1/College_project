@@ -113,7 +113,5 @@ const ObjectHuman = [
     projectRole: "no",
     batch: "2022-2026",
   },
-  
 ];
-
 export default ObjectHuman;
