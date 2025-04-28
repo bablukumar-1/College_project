@@ -3,6 +3,10 @@ import "../StyleSection/History.css";
 import human from '../DataJson/human';
 
 const Dashboard = () => {
+  const ImageClick = (imagePath) => {
+    window.open(imagePath, "_blank");
+  };
+
   return (
     <div className="main">
       <div className="components-grid">
@@ -14,6 +18,7 @@ const Dashboard = () => {
                 src={student.imagePath}
                 alt={student.imagePath}
                 className="h-[50px] w-[50px] rounded-full object-cover cursor-pointer border-[#4a90e2]"
+                onClick={() => ImageClick(student.imagePath)}  
               />
               <div
                 className={`text-[15px] p-2 font-semibold rounded-[10px] font-serif ${
