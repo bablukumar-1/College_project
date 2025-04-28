@@ -41,7 +41,7 @@ const Footer = () => {
           <p className="footer-title font-semibold text-lg mb-2 text-white underline underline-offset-8 hover:text-blue-400 cursor-pointer">
             Follow Us
           </p>
-          <div className="footer-links flex flex-col gap-2 justify-center mt-4">
+          <div className="footer-links flex flex-col gap-2 justify-center items-center  mt-4">
             <a href="https://www.instagram.com/ji_sarkar_ji_/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <FaInstagram className="text-pink-500 h-[30px] w-[30px]" />
               <span className="text-[14px] text-blue-500 font-serif hover:underline hover:text-red-500">Instagram</span>

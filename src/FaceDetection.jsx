@@ -187,9 +187,9 @@ const FaceRecognition = () => {
             ref={videoRef}
             autoPlay
             muted
-            className="  w-full h-[180px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-md shadow-2xl object-cover p-5" 
+            className="  w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[600px] rounded-md shadow-2xl object-cover p-5" 
           />
-          <div className="absolute top-0 left-0 w-full p-3 bg-[#11ED40] bg-opacity-70 text-white text-center text-lg sm:text-xl rounded-t-md">
+          <div className="absolute top-0 left-0 w-full p-2 md:p-3 bg-[#11ED40] bg-opacity-70 text-white text-center text-lg sm:text-xl rounded-t-md">
             {currentMatches.length > 0 ? (
               currentMatches.map((match, index) => (
                 <div key={index}>
@@ -199,7 +199,7 @@ const FaceRecognition = () => {
                 </div>
               ))
             ) : (
-              <div className="text-red-500 text-[22px]">No one detected</div>
+              <div className="text-red-500 text-[22px] ">No one detected</div>
             )}
           </div>
           <img

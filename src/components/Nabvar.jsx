@@ -66,7 +66,7 @@ const Nabvar = () => {
         
         <span
           ref={addToRefs}
-          className="hidden sm:block md:block text-[24px] font-bold"
+          className="hidden sm:block  text-[12px] md:text-[18px] font-semibold"
         >
           Human Detection System
         </span>
