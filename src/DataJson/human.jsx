@@ -11,6 +11,16 @@ const ObjectHuman = [
     batch: "2022-2026",
   },
   {
+    name: "Bablu Sarkar",
+    role: "Student",
+    imagePath: "/images/bablu.jpg",
+    department: "CSE",
+    college: "SITE",
+    enrollment_No: "2201000000742",
+    projectRole: "Team Leader",
+    batch: "2022-2026",
+  },
+  {
     name: "Chandra Bhushan Kumar",
     role: "Student",
     imagePath: "/images/bhushan.jpg",
