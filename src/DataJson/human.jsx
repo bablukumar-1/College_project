@@ -22,12 +22,12 @@ const ObjectHuman = [
   },
 
   {
-    name: "Gyanendra",
+    name: "Gyanendra Chaughary ",
     role: "Student",
     imagePath: "/images/gyanendra.jpg",
     department: "CSE",
     college: "SITE",
-    enrollment_No: "2201000000744",
+    enrollment_No: "22106000001231",
     projectRole: "Idea & Design Developer",
     batch: "2022-2026",
   },
@@ -61,6 +61,7 @@ const ObjectHuman = [
     college: "SITE",
     enrollment_No: "2201000000746",
   },
+  
   {
     name: "Dr. Ravi Agarwal",
     role: "Faculty",
@@ -77,6 +78,7 @@ const ObjectHuman = [
     college: "SITE",
     enrollment_No: "SU201500100",
   },
+
   {
     name: "Ankita Kumari",
     role: "Student",
@@ -87,6 +89,7 @@ const ObjectHuman = [
     projectRole: "no",
     batch: "2022-2026",
   },
+
   {
     name: "Navneet Kumar",
     role: "Student",
