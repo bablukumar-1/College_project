@@ -36,13 +36,22 @@ const Nabvar = () => {
     <nav className="sticky top-0 z-50 bg-gradient-to-bl from-[#8b8bd7] to-[#c4d0f2] text-white px-6 py-4 shadow flex justify-between items-center">
       {/* Left: Subharti Logo */}
       <div className="flex items-center gap-3 cursor-pointer">
-        <img
+        <Link to="/" >
+          <img
+            ref={addToRefs}
+            src={subhartiLogo}
+            alt="Subharti Logo"
+            className="h-[50px] w-[150px] md:w-[250px]"
+          />
+        </Link>
+        {/* <img
           ref={addToRefs}
           src={subhartiLogo}
           alt="Subharti Logo"
           className="h-[50px] w-[150px] md:w-[250px]"
-        />
+        /> */}
       </div>
+
 
       {/* Center: Logo + Title */}
       <div className="flex items-center gap-3 cursor-pointer">
@@ -63,7 +72,6 @@ const Nabvar = () => {
       {/* Right: Desktop Navigation */}
       <div className="hidden md:block">
         <ul className="flex gap-6 text-[18px] font-semibold items-center">
-          <li ref={addToRefs}><Link to="/" className="hover:text-blue-900 hover:underline underline-offset-4">Home</Link></li>
           <li ref={addToRefs}><Link to="/about" className="hover:text-blue-900 hover:underline underline-offset-4">About</Link></li>
           <li ref={addToRefs}><Link to="/Dashboard" className="hover:text-blue-900 hover:underline underline-offset-4">Dashboard</Link></li>
           <li ref={addToRefs}><Link to="/AutofaceAuthentygation" className="hover:text-blue-900 hover:underline underline-offset-4">A-f-Authentication</Link></li>
