@@ -87,6 +87,16 @@ const ObjectHuman = [
     projectRole: "no",
     batch: "2022-2026",
   },
+  {
+    name: "Shivashish Kumar",
+    role: "Student",
+    imagePath: "/images/shivashish.jpg",
+    department: "Ag.",
+    college: "KVSCOS",
+    enrollment_No: "2206000002916",
+    projectRole: "no",
+    batch: "2022-2026",
+  },
 
   {
     name: "Navneet Kumar",
