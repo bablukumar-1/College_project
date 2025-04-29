@@ -1,5 +1,6 @@
 const ObjectHuman = [
 
+  
   {
     name: "Bablu Sarkar",
     role: "Student",
@@ -11,7 +12,7 @@ const ObjectHuman = [
     batch: "2022-2026",
   },
   {
-    name: "Bablu Sarkar",
+    name: "BabluSarkar",
     role: "Student",
     imagePath: "/images/bablu.jpg",
     department: "CSE",
@@ -40,7 +41,7 @@ const ObjectHuman = [
     enrollment_No: "22106000001231",
     projectRole: "Idea & Design Developer",
     batch: "2022-2026",
-    
+
   },
   
   {
