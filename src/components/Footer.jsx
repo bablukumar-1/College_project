@@ -5,7 +5,11 @@ import ObjectHuman from "../DataJson/human";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-gradient-to-bl from-[#08FDC7] to-[#07DFF7]">
+    <footer className="footer"
+    style={{
+        background: 'linear-gradient(90deg, rgba(161, 163, 240, 1) 29%, rgba(29, 227, 253, 1) 56%, rgba(156, 92, 196, 1) 100%)'
+      }}
+    >
       
       {/* Main Content */}
       <div className="footer-container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6 p-4 border-t-2 text-gray-700 text-sm">
@@ -37,7 +41,7 @@ const Footer = () => {
           <p className="footer-title font-semibold text-lg mb-2 text-white underline underline-offset-8 hover:text-blue-400 cursor-pointer">
             Follow Us
           </p>
-          <div className="footer-links flex flex-col gap-2 justify-center mt-4">
+          <div className="footer-links flex flex-col gap-2 justify-center items-center  mt-4">
             <a href="https://www.instagram.com/ji_sarkar_ji_/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <FaInstagram className="text-pink-500 h-[30px] w-[30px]" />
               <span className="text-[14px] text-blue-500 font-serif hover:underline hover:text-red-500">Instagram</span>
