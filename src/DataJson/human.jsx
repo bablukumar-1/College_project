@@ -30,6 +30,7 @@ const ObjectHuman = [
     enrollment_No: "22106000001231",
     projectRole: "Idea & Design Developer",
     batch: "2022-2026",
+    
   },
   
   {
