@@ -4,15 +4,16 @@ import logo from '../../public/images/logo.png';
 import subhartiLogo from '../../public/images/subharti.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { FiMenu, FiX, FiChevronDown, FiMoon, FiSun } from 'react-icons/fi';
+import { FiMenu, FiX, FiChevronDown, FiChevronUp, FiMoon, FiSun } from 'react-icons/fi';
 
 const Nabvar = () => {
   const navItemsRef = useRef([]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [darkModeColor1, setDarkModeColor1] = useState('rgba(161, 163, 240, 1)')
-  const [darkModeColor2, setDarkModeColor2] = useState(' rgba(29, 227, 253, 1)')
-  const [darkModeColor3, setDarkModeColor3] = useState('rgba(156, 92, 196, 1)')
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [darkModeColor1, setDarkModeColor1] = useState('rgba(161, 163, 240, 1)');
+  const [darkModeColor2, setDarkModeColor2] = useState(' rgba(29, 227, 253, 1)');
+  const [darkModeColor3, setDarkModeColor3] = useState('rgba(156, 92, 196, 1)');
 
   navItemsRef.current = [];
 
@@ -34,21 +35,27 @@ const Nabvar = () => {
 
   useEffect(() => {
     if (darkMode) {
-      setDarkModeColor1('black')
-      setDarkModeColor2('black')
-      setDarkModeColor3('black')
+      setDarkModeColor1('black');
+      setDarkModeColor2('black');
+      setDarkModeColor3('black');
     } else {
-      document.documentElement.classList.remove('w');
-      setDarkModeColor1('rgba(161, 163, 240, 1)')
-      setDarkModeColor2(' rgba(29, 227, 253, 1)')
-      setDarkModeColor3('rgba(156, 92, 196, 1)')
+      setDarkModeColor1('rgba(161, 163, 240, 1)');
+      setDarkModeColor2(' rgba(29, 227, 253, 1)');
+      setDarkModeColor3('rgba(156, 92, 196, 1)');
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (showDropdown) setShowDropdown(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [showDropdown]);
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDarkMode = () => setDarkMode(!darkMode);
-
-  
 
   return (
     <nav
@@ -94,19 +101,38 @@ const Nabvar = () => {
         </Link>
 
         {/* Detection Hub Dropdown */}
-        <div className="relative group" ref={addToRefs}>
-          <div className="flex items-center gap-1 hover:text-blue-900 hover:underline underline-offset-4 cursor-pointer">
-            Detection Hub <FiChevronDown className="mt-1" />
-          </div>
-          <div className="absolute hidden group-hover:flex flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-50">
-            <Link to="/Dashboard" className="px-4 py-2 hover:bg-blue-100 hover:text-blue-800 border-b border-gray-200">
-              Dashboard
-            </Link>
-            <Link to="/AutofaceAuthentygation" className="px-4 py-2 hover:bg-blue-100 hover:text-blue-800">
-              A-f-Authentication
-            </Link>
-          </div>
-        </div>
+       <div
+         className="relative"
+         ref={addToRefs}
+         onMouseEnter={() => setShowDropdown(true)}
+       >
+         <div className="flex items-center gap-1 hover:text-blue-900 hover:underline underline-offset-4 cursor-pointer">
+           Detection Hub {showDropdown ? <FiChevronUp className="mt-1" /> : <FiChevronDown className="mt-1" />}
+         </div>
+       
+         {showDropdown && (
+           <div
+             className="absolute left-0 top-[30px] flex flex-col bg-white text-black mt-2 rounded shadow-lg min-w-[200px] z-50"
+             onMouseLeave={() => setShowDropdown(false)} // only leave when leaving dropdown
+           >
+             <Link
+               to="/Dashboard"
+               onClick={() => setShowDropdown(false)} // close on click
+               className="px-4 py-2 hover:bg-blue-100 hover:text-blue-800 border-b border-gray-200"
+             >
+               Dashboard
+             </Link>
+             <Link
+               to="/AutofaceAuthentygation"
+               onClick={() => setShowDropdown(false)} // close on click
+               className="px-4 py-2 hover:bg-blue-100 hover:text-blue-800"
+             >
+               A-f-Authentication
+             </Link>
+           </div>
+         )}
+       </div>
+
 
         <Link ref={addToRefs} to="/sigin" className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">
           Sign In
@@ -125,6 +151,8 @@ const Nabvar = () => {
           {darkMode ? <FiMoon /> : <FiSun />}
         </button>
       </div>
+
+      {/* Dark Mode Toggle (Mobile) */}
       <button
         onClick={toggleDarkMode}
         className="text-white text-[30px] hover:text-yellow-300 block md:hidden"
@@ -152,8 +180,6 @@ const Nabvar = () => {
           <Link to="/AutofaceAuthentygation" onClick={toggleMenu}>A-f-Authentication</Link>
           <Link to="/sigin" onClick={toggleMenu}>Sign In</Link>
           <Link to="/signup" onClick={toggleMenu}>Sign Up</Link>
-
-
         </div>
       )}
     </nav>
