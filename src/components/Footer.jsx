@@ -13,7 +13,6 @@ const Footer = () => {
       
       {/* Main Content */}
       <div className="footer-container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6 p-4 border-t-2 text-gray-700 text-sm">
-
         {/* Left Column */}
         <div className="footer-column ms-[50px] md:ms-0">
           <p className="footer-title font-semibold text-lg mb-2 flex items-center gap-2">
