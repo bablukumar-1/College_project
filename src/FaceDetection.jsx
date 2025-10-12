@@ -236,7 +236,7 @@ const FaceRecognition = () => {
 
         <div className="flex flex-col gap-6 p-6 shadow-2xl rounded-xl bg-amber-400 max-h-[400px] overflow-y-auto transition-all hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-yellow-500 hover:text-white">
           <h3 className="text-xl text-center font-semibold text-white">
-            📌 Unknown Faces Detected
+            📌 Unknown Faces Detected Object
           </h3>
           <ul className="text-base font-serif space-y-2">
             {unknownPeople.map((person, index) => (
